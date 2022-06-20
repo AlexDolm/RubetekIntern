@@ -13,6 +13,9 @@
 		CEA81D4528610C85007B8928 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA81D4328610C85007B8928 /* Main.storyboard */; };
 		CEA81D4728610C8B007B8928 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA81D4628610C8B007B8928 /* Assets.xcassets */; };
 		CEA81D4A28610C8B007B8928 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA81D4828610C8B007B8928 /* LaunchScreen.storyboard */; };
+		CEA81D5428610DD0007B8928 /* DataLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81D5328610DD0007B8928 /* DataLoad.swift */; };
+		CEA81D5628610E10007B8928 /* DoorsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81D5528610E10007B8928 /* DoorsModel.swift */; };
+		CEA81D5828610E65007B8928 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81D5728610E65007B8928 /* SegmentedControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		CEA81D4628610C8B007B8928 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEA81D4928610C8B007B8928 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEA81D4B28610C8B007B8928 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEA81D5328610DD0007B8928 /* DataLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoad.swift; sourceTree = "<group>"; };
+		CEA81D5528610E10007B8928 /* DoorsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorsModel.swift; sourceTree = "<group>"; };
+		CEA81D5728610E65007B8928 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,34 @@
 		CEA81D3C28610C85007B8928 /* RubetekIntern */ = {
 			isa = PBXGroup;
 			children = (
+				CEA81D5228610DA4007B8928 /* Models */,
+				CEA81D5128610D87007B8928 /* UI */,
 				CEA81D3D28610C85007B8928 /* AppDelegate.swift */,
 				CEA81D3F28610C85007B8928 /* SceneDelegate.swift */,
-				CEA81D4128610C85007B8928 /* ViewController.swift */,
 				CEA81D4328610C85007B8928 /* Main.storyboard */,
 				CEA81D4628610C8B007B8928 /* Assets.xcassets */,
 				CEA81D4828610C8B007B8928 /* LaunchScreen.storyboard */,
 				CEA81D4B28610C8B007B8928 /* Info.plist */,
 			);
 			path = RubetekIntern;
+			sourceTree = "<group>";
+		};
+		CEA81D5128610D87007B8928 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CEA81D4128610C85007B8928 /* ViewController.swift */,
+				CEA81D5728610E65007B8928 /* SegmentedControl.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		CEA81D5228610DA4007B8928 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEA81D5328610DD0007B8928 /* DataLoad.swift */,
+				CEA81D5528610E10007B8928 /* DoorsModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +165,10 @@
 			files = (
 				CEA81D4228610C85007B8928 /* ViewController.swift in Sources */,
 				CEA81D3E28610C85007B8928 /* AppDelegate.swift in Sources */,
+				CEA81D5628610E10007B8928 /* DoorsModel.swift in Sources */,
 				CEA81D4028610C85007B8928 /* SceneDelegate.swift in Sources */,
+				CEA81D5828610E65007B8928 /* SegmentedControl.swift in Sources */,
+				CEA81D5428610DD0007B8928 /* DataLoad.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
