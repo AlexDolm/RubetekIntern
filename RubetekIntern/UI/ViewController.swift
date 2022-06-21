@@ -8,12 +8,13 @@
 import UIKit
 import RealmSwift
 class ViewController: UIViewController {
-    var doors: Doors? = nil
-    var dataLoad = DataLoad()
+
+    var doors = Doors()
     let realm = try! Realm()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        doorsLoad()
         view.translatesAutoresizingMaskIntoConstraints = false
         let control = SegmentedControl()
         view.addSubview(control)
@@ -21,7 +22,7 @@ class ViewController: UIViewController {
         control.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         control.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         control.update(titles: ["Камеры","Двери"])
-        doorsLoad()
+        
         
     }
     
@@ -29,15 +30,15 @@ class ViewController: UIViewController {
         if realm.objects(Doors.self).count == 0 {
         let URl = URL(string: "http://cars.cprogroup.ru/api/rubetek/doors/")!
 
-        dataLoad.JSONLoad(URL:URl){ result in
-            self.doors = result
+            doors.JSONLoad(URL:URl){ result in
+                self.doors = result!
             
             if self.doors != nil{
                 DispatchQueue.main.async { [self] in
-                    title = String(self.doors!.data[0].name)
-                    print(self.doors!.data[3].snapshot)
+                    title = String(self.doors.data[0].name)
+                    print(self.doors.data[3].snapshot)
                                     try! self.realm.write{
-                                        self.realm.add(doors!)
+                                        self.realm.add(doors)
                                     }
                 }
             }
@@ -49,8 +50,8 @@ class ViewController: UIViewController {
         }
         
         print("ВСЕГО \(realm.objects(Doors.self).count)")
-        print("всего \(doors?.data[0].name)")
-        
+        print("всего \(doors.data[0].name)")
+        print("конец")
     }
     
     

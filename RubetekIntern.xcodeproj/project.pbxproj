@@ -18,6 +18,7 @@
 		CEA81D5828610E65007B8928 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81D5728610E65007B8928 /* SegmentedControl.swift */; };
 		CEB0734E2861C438001AE10F /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = CEB0734D2861C438001AE10F /* Realm */; };
 		CEB073502861C438001AE10F /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CEB0734F2861C438001AE10F /* RealmSwift */; };
+		CEB073522861CBCF001AE10F /* CamerasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB073512861CBCF001AE10F /* CamerasModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CEA81D5328610DD0007B8928 /* DataLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoad.swift; sourceTree = "<group>"; };
 		CEA81D5528610E10007B8928 /* DoorsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorsModel.swift; sourceTree = "<group>"; };
 		CEA81D5728610E65007B8928 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
+		CEB073512861CBCF001AE10F /* CamerasModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamerasModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			children = (
 				CEA81D5328610DD0007B8928 /* DataLoad.swift */,
 				CEA81D5528610E10007B8928 /* DoorsModel.swift */,
+				CEB073512861CBCF001AE10F /* CamerasModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEA81D4228610C85007B8928 /* ViewController.swift in Sources */,
+				CEB073522861CBCF001AE10F /* CamerasModel.swift in Sources */,
 				CEA81D3E28610C85007B8928 /* AppDelegate.swift in Sources */,
 				CEA81D5628610E10007B8928 /* DoorsModel.swift in Sources */,
 				CEA81D4028610C85007B8928 /* SceneDelegate.swift in Sources */,
