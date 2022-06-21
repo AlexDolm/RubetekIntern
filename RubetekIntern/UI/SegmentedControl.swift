@@ -11,6 +11,12 @@ class SegmentedControl: UIView {
     let stack = UIStackView()
     private var items = [Item]()
     
+    private struct Item{
+        let view: UIView
+        let line: UIView
+    }
+    
+    
     public func update(titles: [String]){
 
         for view in stack.arrangedSubviews{
@@ -28,6 +34,7 @@ class SegmentedControl: UIView {
         items.first?.line.backgroundColor = .blue
   
     }
+    
     init()
     {
         
@@ -38,10 +45,9 @@ class SegmentedControl: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    private struct Item{
-        let view: UIView
-        let line: UIView
-    }
+
+    
+    
     private func setUp() {
         translatesAutoresizingMaskIntoConstraints = false
         heightAnchor.constraint(equalToConstant: 70).isActive = true
@@ -99,9 +105,6 @@ class SegmentedControl: UIView {
         
     }
     
-    private func select(){
-        
-    }
     
     
 }
