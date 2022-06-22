@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE2C4F962863716F009414FE /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2C4F952863716F009414FE /* NetworkService.swift */; };
+		CE2C4F98286377FA009414FE /* ProtocolModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2C4F97286377FA009414FE /* ProtocolModels.swift */; };
 		CE69C13E28624557002E5A25 /* ExCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69C13D28624557002E5A25 /* ExCell.swift */; };
 		CE69C1402862F006002E5A25 /* AlertError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69C13F2862F006002E5A25 /* AlertError.swift */; };
 		CE69C1432862F190002E5A25 /* ExtensionForDataLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69C1422862F190002E5A25 /* ExtensionForDataLoad.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE2C4F952863716F009414FE /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		CE2C4F97286377FA009414FE /* ProtocolModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolModels.swift; sourceTree = "<group>"; };
 		CE69C13D28624557002E5A25 /* ExCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExCell.swift; sourceTree = "<group>"; };
 		CE69C13F2862F006002E5A25 /* AlertError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertError.swift; sourceTree = "<group>"; };
 		CE69C1422862F190002E5A25 /* ExtensionForDataLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionForDataLoad.swift; sourceTree = "<group>"; };
@@ -53,13 +57,89 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CE69C1412862F160002E5A25 /* Extensions */ = {
+		CE2C4F8A28636AD5009414FE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CE2C4F8D28636D2E009414FE /* NetworkService */,
+				CE2C4F8C28636D03009414FE /* Components */,
+				CE2C4F8E28636D48009414FE /* etc */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CE2C4F8B28636CC6009414FE /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CE2C4F8F28636DDE009414FE /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CE2C4F8C28636D03009414FE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CE69C13F2862F006002E5A25 /* AlertError.swift */,
+				CEA81D5728610E65007B8928 /* SegmentedControl.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		CE2C4F8D28636D2E009414FE /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				CE2C4F952863716F009414FE /* NetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		CE2C4F8E28636D48009414FE /* etc */ = {
+			isa = PBXGroup;
+			children = (
+				CEA81D3D28610C85007B8928 /* AppDelegate.swift */,
+				CEA81D3F28610C85007B8928 /* SceneDelegate.swift */,
+				CEA81D4628610C8B007B8928 /* Assets.xcassets */,
+				CEA81D4828610C8B007B8928 /* LaunchScreen.storyboard */,
+				CEA81D4B28610C8B007B8928 /* Info.plist */,
+			);
+			path = etc;
+			sourceTree = "<group>";
+		};
+		CE2C4F8F28636DDE009414FE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CE2C4F9028636DE7009414FE /* Model */,
+				CE2C4F9128636DF2009414FE /* View */,
+				CE2C4F9228636DFC009414FE /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CE2C4F9028636DE7009414FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEA81D5528610E10007B8928 /* DoorsModel.swift */,
+				CEB073512861CBCF001AE10F /* CamerasModel.swift */,
+				CE2C4F97286377FA009414FE /* ProtocolModels.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE2C4F9128636DF2009414FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEA81D4128610C85007B8928 /* ViewController.swift */,
+				CE69C13D28624557002E5A25 /* ExCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE2C4F9228636DFC009414FE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				CE69C1422862F190002E5A25 /* ExtensionForDataLoad.swift */,
 				CE69C1442862F31A002E5A25 /* ExtensionsForCollectionViewDataSource.swift */,
 			);
-			path = Extensions;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		CEA81D3128610C85007B8928 = {
@@ -81,36 +161,10 @@
 		CEA81D3C28610C85007B8928 /* RubetekIntern */ = {
 			isa = PBXGroup;
 			children = (
-				CE69C1412862F160002E5A25 /* Extensions */,
-				CEA81D5228610DA4007B8928 /* Models */,
-				CEA81D5128610D87007B8928 /* UI */,
-				CEA81D3D28610C85007B8928 /* AppDelegate.swift */,
-				CEA81D3F28610C85007B8928 /* SceneDelegate.swift */,
-				CEA81D4628610C8B007B8928 /* Assets.xcassets */,
-				CEA81D4828610C8B007B8928 /* LaunchScreen.storyboard */,
-				CEA81D4B28610C8B007B8928 /* Info.plist */,
+				CE2C4F8B28636CC6009414FE /* Modules */,
+				CE2C4F8A28636AD5009414FE /* Main */,
 			);
 			path = RubetekIntern;
-			sourceTree = "<group>";
-		};
-		CEA81D5128610D87007B8928 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				CEA81D4128610C85007B8928 /* ViewController.swift */,
-				CE69C13D28624557002E5A25 /* ExCell.swift */,
-				CEA81D5728610E65007B8928 /* SegmentedControl.swift */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		CEA81D5228610DA4007B8928 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				CEA81D5528610E10007B8928 /* DoorsModel.swift */,
-				CEB073512861CBCF001AE10F /* CamerasModel.swift */,
-				CE69C13F2862F006002E5A25 /* AlertError.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +244,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2C4F962863716F009414FE /* NetworkService.swift in Sources */,
+				CE2C4F98286377FA009414FE /* ProtocolModels.swift in Sources */,
 				CEA81D4228610C85007B8928 /* ViewController.swift in Sources */,
 				CEB073522861CBCF001AE10F /* CamerasModel.swift in Sources */,
 				CEA81D3E28610C85007B8928 /* AppDelegate.swift in Sources */,
@@ -341,7 +397,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RubetekIntern/Info.plist;
+				INFOPLIST_FILE = RubetekIntern/Main/etc/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -367,7 +423,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RubetekIntern/Info.plist;
+				INFOPLIST_FILE = RubetekIntern/Main/etc/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

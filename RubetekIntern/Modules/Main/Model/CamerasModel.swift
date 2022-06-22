@@ -28,6 +28,8 @@ class CamerasLast: Object, Decodable  {
 
 class Cameras: Object, Decodable {
 
+    
+
     @objc dynamic var success: Bool = false
     @objc dynamic var data: DataCameras? = nil
 

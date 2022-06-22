@@ -9,6 +9,8 @@ import UIKit
 import RealmSwift
 import SwiftUI
 class ViewController: UIViewController {
+    
+    
 
     var doors = Doors()
     var cameras = Cameras()
@@ -20,8 +22,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-       doorsLoad()
-       camerasLoad()
+        doors.ParseJSON()
+        
+       //doorsLoad()
+      // camerasLoad()
         addControl()
         addCollection()
         
