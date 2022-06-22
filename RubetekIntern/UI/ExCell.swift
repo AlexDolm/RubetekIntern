@@ -24,6 +24,17 @@ class ExCell: UICollectionViewCell {
     func update(by model: DataDoors){
         label.text = model.name
        // image.image = model.snapshot
+        if let snapshot = model.snapshot{
+            if let url = URL(string: snapshot){
+                do{
+                    let data = try Data(contentsOf: url)
+                    
+                }catch let err{
+                    print("ошибка - \(err)")
+                }
+            }
+        }
+
         
     }
     func setUp(){
@@ -41,7 +52,6 @@ class ExCell: UICollectionViewCell {
         stackView.addArrangedSubview(image)
     
         label.translatesAutoresizingMaskIntoConstraints = false
-       
         
         let contaner = UIView()
         contaner.addSubview(label)
@@ -50,6 +60,8 @@ class ExCell: UICollectionViewCell {
         label.leadingAnchor.constraint(equalTo: contaner.leadingAnchor, constant: 10).isActive = true
         label.trailingAnchor.constraint(equalTo: contaner.trailingAnchor, constant: -10).isActive = true
         stackView.addArrangedSubview(contaner)
+        label.text = "sd"
+        label.backgroundColor  = .blue
         
         contentView.layer.cornerRadius = 10
         contentView.layer.masksToBounds = true

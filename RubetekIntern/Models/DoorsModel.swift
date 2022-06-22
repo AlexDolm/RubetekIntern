@@ -9,6 +9,15 @@ import Foundation
 import FileProvider
 import RealmSwift
 
+class DataDoors: Object, Decodable  {
+    @objc dynamic var name: String = ""
+    @objc dynamic var room: String? = nil
+    @objc dynamic var snapshot: String? = ""
+    @objc dynamic var id: Int = 0
+    @objc dynamic var favorites: Bool = false
+    
+    
+}
 class Doors: Object, Decodable {
     
     @objc dynamic var success: Bool = false
@@ -34,12 +43,4 @@ class Doors: Object, Decodable {
 
 }
 
-class DataDoors: Object, Decodable  {
-    @objc dynamic var name: String = ""
-    @objc dynamic var room: String? = nil
-    @objc dynamic var snapshot: String? = ""
-    @objc dynamic var id: Int = 0
-    @objc dynamic var favorites: Bool = false
-    
-    
-}
+

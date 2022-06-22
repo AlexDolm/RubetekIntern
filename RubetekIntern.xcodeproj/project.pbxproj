@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		CE69C13E28624557002E5A25 /* ExCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69C13D28624557002E5A25 /* ExCell.swift */; };
+		CE69C1402862F006002E5A25 /* AlertError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69C13F2862F006002E5A25 /* AlertError.swift */; };
+		CE69C1432862F190002E5A25 /* ExtensionForDataLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69C1422862F190002E5A25 /* ExtensionForDataLoad.swift */; };
+		CE69C1452862F31A002E5A25 /* ExtensionsForCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69C1442862F31A002E5A25 /* ExtensionsForCollectionViewDataSource.swift */; };
 		CEA81D3E28610C85007B8928 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81D3D28610C85007B8928 /* AppDelegate.swift */; };
 		CEA81D4028610C85007B8928 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81D3F28610C85007B8928 /* SceneDelegate.swift */; };
 		CEA81D4228610C85007B8928 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81D4128610C85007B8928 /* ViewController.swift */; };
 		CEA81D4728610C8B007B8928 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA81D4628610C8B007B8928 /* Assets.xcassets */; };
 		CEA81D4A28610C8B007B8928 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA81D4828610C8B007B8928 /* LaunchScreen.storyboard */; };
-		CEA81D5428610DD0007B8928 /* DataLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81D5328610DD0007B8928 /* DataLoad.swift */; };
 		CEA81D5628610E10007B8928 /* DoorsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81D5528610E10007B8928 /* DoorsModel.swift */; };
 		CEA81D5828610E65007B8928 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81D5728610E65007B8928 /* SegmentedControl.swift */; };
 		CEB0734E2861C438001AE10F /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = CEB0734D2861C438001AE10F /* Realm */; };
 		CEB073502861C438001AE10F /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CEB0734F2861C438001AE10F /* RealmSwift */; };
 		CEB073522861CBCF001AE10F /* CamerasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB073512861CBCF001AE10F /* CamerasModel.swift */; };
-		CEB0735628620FDB001AE10F /* CollectionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0735528620FDB001AE10F /* CollectionControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE69C13D28624557002E5A25 /* ExCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExCell.swift; sourceTree = "<group>"; };
+		CE69C13F2862F006002E5A25 /* AlertError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertError.swift; sourceTree = "<group>"; };
+		CE69C1422862F190002E5A25 /* ExtensionForDataLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionForDataLoad.swift; sourceTree = "<group>"; };
+		CE69C1442862F31A002E5A25 /* ExtensionsForCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsForCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		CEA81D3A28610C85007B8928 /* RubetekIntern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RubetekIntern.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA81D3D28610C85007B8928 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEA81D3F28610C85007B8928 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,11 +35,9 @@
 		CEA81D4628610C8B007B8928 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEA81D4928610C8B007B8928 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEA81D4B28610C8B007B8928 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEA81D5328610DD0007B8928 /* DataLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoad.swift; sourceTree = "<group>"; };
 		CEA81D5528610E10007B8928 /* DoorsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorsModel.swift; sourceTree = "<group>"; };
 		CEA81D5728610E65007B8928 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		CEB073512861CBCF001AE10F /* CamerasModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamerasModel.swift; sourceTree = "<group>"; };
-		CEB0735528620FDB001AE10F /* CollectionControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE69C1412862F160002E5A25 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE69C1422862F190002E5A25 /* ExtensionForDataLoad.swift */,
+				CE69C1442862F31A002E5A25 /* ExtensionsForCollectionViewDataSource.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CEA81D3128610C85007B8928 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +81,7 @@
 		CEA81D3C28610C85007B8928 /* RubetekIntern */ = {
 			isa = PBXGroup;
 			children = (
+				CE69C1412862F160002E5A25 /* Extensions */,
 				CEA81D5228610DA4007B8928 /* Models */,
 				CEA81D5128610D87007B8928 /* UI */,
 				CEA81D3D28610C85007B8928 /* AppDelegate.swift */,
@@ -94,10 +106,9 @@
 		CEA81D5228610DA4007B8928 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CEA81D5328610DD0007B8928 /* DataLoad.swift */,
 				CEA81D5528610E10007B8928 /* DoorsModel.swift */,
 				CEB073512861CBCF001AE10F /* CamerasModel.swift */,
-				CEB0735528620FDB001AE10F /* CollectionControl.swift */,
+				CE69C13F2862F006002E5A25 /* AlertError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -182,12 +193,13 @@
 				CEA81D4228610C85007B8928 /* ViewController.swift in Sources */,
 				CEB073522861CBCF001AE10F /* CamerasModel.swift in Sources */,
 				CEA81D3E28610C85007B8928 /* AppDelegate.swift in Sources */,
+				CE69C1452862F31A002E5A25 /* ExtensionsForCollectionViewDataSource.swift in Sources */,
 				CE69C13E28624557002E5A25 /* ExCell.swift in Sources */,
 				CEA81D5628610E10007B8928 /* DoorsModel.swift in Sources */,
+				CE69C1402862F006002E5A25 /* AlertError.swift in Sources */,
 				CEA81D4028610C85007B8928 /* SceneDelegate.swift in Sources */,
+				CE69C1432862F190002E5A25 /* ExtensionForDataLoad.swift in Sources */,
 				CEA81D5828610E65007B8928 /* SegmentedControl.swift in Sources */,
-				CEA81D5428610DD0007B8928 /* DataLoad.swift in Sources */,
-				CEB0735628620FDB001AE10F /* CollectionControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
