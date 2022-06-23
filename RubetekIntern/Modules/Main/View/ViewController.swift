@@ -27,11 +27,11 @@ class ViewController: UIViewController {
         })
         
         
-//        CamerasLast.ParseJSON(completion: { [self] result in
-//            cameras = result
-//            print("последний вывод камеры")
-//            print(cameras)
-//        })
+        CamerasLast.ParseJSON(completion: { [self] result in
+            cameras = result
+            print("последний вывод камеры")
+            print(cameras)
+        })
 
         
         

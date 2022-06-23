@@ -50,18 +50,27 @@ class CamerasLast: Object, Decodable  {
     static func ParseJSON(completion: @escaping ([CamerasLast]?) -> Void){
         let network = NetworkService()
         let realm = try! Realm()
-        var object: [CamerasLast]?
+        var object: [CamerasLast]?  = []
 
         if realm.objects(CamerasLast.self).count == 0 {
 
-            network.camerasLoad(url: CamerasLast.URLReturn()) { object in
+            network.allLoad(url: CamerasLast.URLReturn(), type: "CamerasLast") { object in
                 if object != nil{
                     print("готово \(object)")
-                    DispatchQueue.main.async { [self] in
-                    try! realm.write{
-                        realm.add(object!)
+                    switch object{
+                    case .cameras(let array):
+                       let forRealm = array
+                        DispatchQueue.main.async { [self] in
+                        try! realm.write{
+
+                            realm.add(forRealm)
+                            
+                                }
                             }
-                        }
+                        
+                    default:
+                        print("что-то не так")
+                    }
                 }
                 else {
                                 DispatchQueue.main.async {
