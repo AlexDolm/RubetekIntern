@@ -10,31 +10,29 @@ import FileProvider
 import RealmSwift
 
 
+
 class DataDoors: Object, Decodable  {
     @objc dynamic var name: String = ""
     @objc dynamic var room: String? = nil
     @objc dynamic var snapshot: String? = ""
     @objc dynamic var id: Int = 0
     @objc dynamic var favorites: Bool = false
-    
-    
-}
-class Doors: Object, Decodable, Network {
-    
     static let url = "http://cars.cprogroup.ru/api/rubetek/doors/"
-    @objc dynamic var success: Bool = false
-    var data = List<DataDoors>()
     
+    func URLReturn() -> String{
+        return DataDoors.url
+    }
     
-    func JSONLoad(URL: URL, completion: @escaping (Doors?) -> Void)
+    func JSONLoad(URL: URL, completion: @escaping ([DataDoors]?) -> Void)
     {
-        var doors: Doors?
+        var doors: [DataDoors]?
         URLSession.shared.dataTask(with: URL) { data, response, error in
             guard let data = data else {
                 return
             }
             do {
-                doors = try JSONDecoder().decode(Doors.self, from: data)
+                let ddoors = try JSONDecoder().decode(Doors.self, from: data).data
+                doors = Array(ddoors)
             } catch  {
                 print(error)
                 doors = nil
@@ -43,47 +41,60 @@ class Doors: Object, Decodable, Network {
             }.resume()
     }
     
-    func URLReturn() -> String{
-        return Doors.url
-    }
+        func ParseJSON() -> [DataDoors]?{
+            let network = NetworkService()
+            let realm = try! Realm()
+            var object: [DataDoors]? = []
     
-    func ParseJSON(){
-        let network = NetworkService()
-        let realm = try! Realm()
-        var object: Doors?
-        let doors = Doors()
-        
-        if realm.objects(Doors.self).count == 0 {
-            
-            network.doorsLoad(url: URLReturn()) { object in
-                if object != nil{
-                    DispatchQueue.main.async { [self] in
-                    try! realm.write{
-                        realm.add(object!)
-                            }
-                        }
-                }
-                else {
-                                DispatchQueue.main.async {
-            //                        alertError(title: "Ошибка", message: "Сервер временно недоступен. Проверьте подключение к сети.")
+            if realm.objects(DataDoors.self).count == 0 {
+    
+                network.doorsLoad(url: URLReturn()) { object in
+                    if object != nil{
+                        print("готово \(object)")
+                        DispatchQueue.main.async { [self] in
+                        try! realm.write{
+                            realm.add(object!)
                                 }
                             }
-            }     
+                    }
+                    else {
+                                    DispatchQueue.main.async {
+                //                        alertError(title: "Ошибка", message: "Сервер временно недоступен. Проверьте подключение к сети.")
+                                    }
+                                }
+                }
+    
+            }
+            else{
+                //тут сделать чтение по строкам с for
+                print("готово d \(realm.objects(DataDoors.self).count)")
+                print("готово d2 \(realm.objects(DataDoors.self)[0])")
+                print("готово d2 \(realm.objects(DataDoors.self))")
+                for door in 0...realm.objects(DataDoors.self).count-1 {
+                    object?.append(realm.objects(DataDoors.self)[door])
                     
+                }
+                
+                
+                print("готово \(object)")
+    
+            }
+            return object
         }
-        else{
-            object = realm.objects(Doors.self)[0]
-
-        }
-        
-    }
-    
-    
-    
-    
-    
-    
 
 }
+
+
+
+
+class Doors: Decodable {
+    var data = List<DataDoors>()
+}
+
+//class Doors: Object, Decodable {
+//    var data = List<DataDoors>()
+//}
+
+
 
 

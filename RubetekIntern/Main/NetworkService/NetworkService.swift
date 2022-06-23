@@ -9,10 +9,10 @@ import Foundation
 
 class NetworkService{
     
-    func doorsLoad(url: String, completion: @escaping (Doors?) -> Void)
+    func doorsLoad(url: String, completion: @escaping ([DataDoors]?) -> Void)
     {
-        var object: Doors?
-        let doors = Doors()
+        var object: [DataDoors]?
+        let doors = DataDoors()
         
             let URl = URL(string: url)!
         

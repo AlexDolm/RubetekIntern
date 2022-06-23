@@ -12,7 +12,8 @@ class ViewController: UIViewController {
     
     
 
-    var doors = Doors()
+    var doors = DataDoors()
+    var doors2:[DataDoors]? = []
     var cameras = Cameras()
     let realm = try! Realm()
     let control = SegmentedControl()
@@ -22,7 +23,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        doors.ParseJSON()
+        doors2 = doors.ParseJSON()
+        print("последний вывод")
+        print(doors2)
         
        //doorsLoad()
       // camerasLoad()
@@ -34,6 +37,9 @@ class ViewController: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = false
         
     }
+    
+    
+    
     
     
 
