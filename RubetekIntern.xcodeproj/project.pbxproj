@@ -78,6 +78,7 @@
 		CE2C4F8C28636D03009414FE /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CE69C13D28624557002E5A25 /* ExCell.swift */,
 				CE69C13F2862F006002E5A25 /* AlertError.swift */,
 				CEA81D5728610E65007B8928 /* SegmentedControl.swift */,
 			);
@@ -128,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				CEA81D4128610C85007B8928 /* ViewController.swift */,
-				CE69C13D28624557002E5A25 /* ExCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

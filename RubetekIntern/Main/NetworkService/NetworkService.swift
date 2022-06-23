@@ -7,16 +7,68 @@
 
 import Foundation
 
+enum Response{
+    case doors([DataDoors])
+    case cameras([CamerasLast])
+}
+
 class NetworkService{
+    
+    func allLoad(url: String, type: String, completion: @escaping (Response?) -> Void)
+    {
+
+        
+        if type == "DataDoors"{
+            var object: [DataDoors]?
+            
+                let URl = URL(string: url)!
+            
+            DataDoors.JSONLoad(URL:URl){ result in
+                    object = result
+                completion(Response.doors(object!))
+
+            }
+            
+        }
+        else {
+            var object: [CamerasLast]?
+            
+                let URl = URL(string: url)!
+            
+            CamerasLast.JSONLoad(URL:URl){ result in
+                    object = result
+                completion(Response.cameras(object!))
+
+            }
+            
+        }
+
+            
+            
+    }
     
     func doorsLoad(url: String, completion: @escaping ([DataDoors]?) -> Void)
     {
         var object: [DataDoors]?
-        let doors = DataDoors()
         
             let URl = URL(string: url)!
         
-            doors.JSONLoad(URL:URl){ result in
+        DataDoors.JSONLoad(URL:URl){ result in
+                object = result
+                completion(object)
+
+        }
+            
+            
+    }
+    
+    func camerasLoad(url: String, completion: @escaping ([CamerasLast]?) -> Void)
+    {
+        var object: [CamerasLast]?
+        
+            let URl = URL(string: url)!
+        
+        CamerasLast.JSONLoad(URL:URl){ result in
                 object = result
                 completion(object)
 

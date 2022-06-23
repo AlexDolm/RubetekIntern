@@ -11,11 +11,8 @@ import SwiftUI
 class ViewController: UIViewController {
     
     
-
-    var doors = DataDoors()
     var doors2:[DataDoors]? = []
-    var cameras = Cameras()
-    let realm = try! Realm()
+    var cameras:[CamerasLast]? = []
     let control = SegmentedControl()
     
 
@@ -23,12 +20,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        doors2 = doors.ParseJSON()
-        print("последний вывод")
-        print(doors2)
+        DataDoors.ParseJSON(completion: { [self] result in
+            doors2 = result
+            print("последний вывод дверей")
+            print(doors2)
+        })
         
-       //doorsLoad()
-      // camerasLoad()
+        
+//        CamerasLast.ParseJSON(completion: { [self] result in
+//            cameras = result
+//            print("последний вывод камеры")
+//            print(cameras)
+//        })
+
+        
+        
         addControl()
         addCollection()
         

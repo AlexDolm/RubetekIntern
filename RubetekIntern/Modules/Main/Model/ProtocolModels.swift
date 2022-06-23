@@ -8,7 +8,6 @@
 import Foundation
 
 protocol Network{
-//    func JSONLoad<T: Equatable>(URL: URL, completion: @escaping (T?) -> Void)
-//
-//    func URLReturn() -> String
+    static func JSONLoad<T: Equatable>(URL: URL, type: T.Type, completion: @escaping (T?) -> Void)
+    static func URLReturn() -> String
 }

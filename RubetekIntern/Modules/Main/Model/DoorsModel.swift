@@ -12,6 +12,8 @@ import RealmSwift
 
 
 class DataDoors: Object, Decodable  {
+
+    
     @objc dynamic var name: String = ""
     @objc dynamic var room: String? = nil
     @objc dynamic var snapshot: String? = ""
@@ -19,11 +21,11 @@ class DataDoors: Object, Decodable  {
     @objc dynamic var favorites: Bool = false
     static let url = "http://cars.cprogroup.ru/api/rubetek/doors/"
     
-    func URLReturn() -> String{
+    static func URLReturn() -> String{
         return DataDoors.url
     }
     
-    func JSONLoad(URL: URL, completion: @escaping ([DataDoors]?) -> Void)
+    static func JSONLoad(URL: URL, completion: @escaping ([DataDoors]?) -> Void)
     {
         var doors: [DataDoors]?
         URLSession.shared.dataTask(with: URL) { data, response, error in
@@ -41,21 +43,33 @@ class DataDoors: Object, Decodable  {
             }.resume()
     }
     
-        func ParseJSON() -> [DataDoors]?{
+        static func ParseJSON(completion: @escaping ([DataDoors]?) -> Void){
             let network = NetworkService()
             let realm = try! Realm()
             var object: [DataDoors]? = []
     
             if realm.objects(DataDoors.self).count == 0 {
     
-                network.doorsLoad(url: URLReturn()) { object in
+                
+                network.allLoad(url: DataDoors.URLReturn(), type: "DataDoors") { object in
                     if object != nil{
                         print("готово \(object)")
-                        DispatchQueue.main.async { [self] in
-                        try! realm.write{
-                            realm.add(object!)
+                        switch object{
+                        case .doors(let array):
+                           let forRealm = array
+                            DispatchQueue.main.async { [self] in
+                            try! realm.write{
+
+                                realm.add(forRealm)
+                                
+                                    }
                                 }
-                            }
+                            
+                        default:
+                            print("что-то пошло не так")
+                        }
+      
+  
                     }
                     else {
                                     DispatchQueue.main.async {
@@ -79,22 +93,15 @@ class DataDoors: Object, Decodable  {
                 print("готово \(object)")
     
             }
-            return object
+            completion(object)
         }
 
 }
 
 
-
-
 class Doors: Decodable {
     var data = List<DataDoors>()
 }
-
-//class Doors: Object, Decodable {
-//    var data = List<DataDoors>()
-//}
-
 
 
 
