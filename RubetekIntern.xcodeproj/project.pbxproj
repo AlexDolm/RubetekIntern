@@ -11,7 +11,6 @@
 		CE2C4F98286377FA009414FE /* ProtocolModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2C4F97286377FA009414FE /* ProtocolModels.swift */; };
 		CE69C13E28624557002E5A25 /* ExCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69C13D28624557002E5A25 /* ExCell.swift */; };
 		CE69C1402862F006002E5A25 /* AlertError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69C13F2862F006002E5A25 /* AlertError.swift */; };
-		CE69C1432862F190002E5A25 /* ExtensionForDataLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69C1422862F190002E5A25 /* ExtensionForDataLoad.swift */; };
 		CE69C1452862F31A002E5A25 /* ExtensionsForCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69C1442862F31A002E5A25 /* ExtensionsForCollectionViewDataSource.swift */; };
 		CEA81D3E28610C85007B8928 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81D3D28610C85007B8928 /* AppDelegate.swift */; };
 		CEA81D4028610C85007B8928 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81D3F28610C85007B8928 /* SceneDelegate.swift */; };
@@ -30,7 +29,6 @@
 		CE2C4F97286377FA009414FE /* ProtocolModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolModels.swift; sourceTree = "<group>"; };
 		CE69C13D28624557002E5A25 /* ExCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExCell.swift; sourceTree = "<group>"; };
 		CE69C13F2862F006002E5A25 /* AlertError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertError.swift; sourceTree = "<group>"; };
-		CE69C1422862F190002E5A25 /* ExtensionForDataLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionForDataLoad.swift; sourceTree = "<group>"; };
 		CE69C1442862F31A002E5A25 /* ExtensionsForCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsForCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		CEA81D3A28610C85007B8928 /* RubetekIntern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RubetekIntern.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA81D3D28610C85007B8928 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,7 +134,6 @@
 		CE2C4F9228636DFC009414FE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CE69C1422862F190002E5A25 /* ExtensionForDataLoad.swift */,
 				CE69C1442862F31A002E5A25 /* ExtensionsForCollectionViewDataSource.swift */,
 			);
 			path = Controller;
@@ -254,7 +251,6 @@
 				CEA81D5628610E10007B8928 /* DoorsModel.swift in Sources */,
 				CE69C1402862F006002E5A25 /* AlertError.swift in Sources */,
 				CEA81D4028610C85007B8928 /* SceneDelegate.swift in Sources */,
-				CE69C1432862F190002E5A25 /* ExtensionForDataLoad.swift in Sources */,
 				CEA81D5828610E65007B8928 /* SegmentedControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

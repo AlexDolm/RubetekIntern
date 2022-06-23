@@ -34,35 +34,6 @@ class NetworkService{
         }
     }
     
-    func doorsLoad(url: String, completion: @escaping ([DataDoors]?) -> Void)
-    {
-        var object: [DataDoors]?
-        
-            let URl = URL(string: url)!
-        
-        DataDoors.JSONLoad(URL:URl){ result in
-                object = result
-                completion(object)
-
-        }
-            
-            
-    }
-    
-    func camerasLoad(url: String, completion: @escaping ([CamerasLast]?) -> Void)
-    {
-        var object: [CamerasLast]?
-        
-            let URl = URL(string: url)!
-        
-        CamerasLast.JSONLoad(URL:URl){ result in
-                object = result
-                completion(object)
-
-        }
-            
-            
-    }
     
     
 }
